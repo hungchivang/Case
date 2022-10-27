@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cho thuê phòng giá rẻ</title>
+</head>
+
+<body>
+<div class="header">
+    <div id="div1">
+        <img src="logo.jpg" alt="">
+    </div>
+    <div id="div11">
+        <h2>SMART HOME</h2>
+        <h3>VÌ CỘNG ĐỒNG - KIẾN TẠO AN CƯ </h3>
+    </div>
+    <div id="div12">
+        <div style="    margin-top: 63px; display: flex; margin-left: 120px;">
+            <div>
+                <input type="text" style="text-align: left; height: 27px;width: 200px" placeholder="Nhập từ khóa ...">
+            </div>
+            <div>
+                <button style="font-size: 13px; height: 33px; width: 40px"><i class="fa fa-search"></i></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="div2">
+    <div>
+        <nav>
+            <div class="cha"> TRANG CHỦ
+                <ul class="con">
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Chung cư</a></li>
+                    <li><a href="#">Chung cư mini</a></li>
+                    <li><a href="#">Nhà trọ chung chủ</a></li>
+                    <li><a href="#">Dãy nhà trọ tự quản lý</a></li>
+                    <li><a href="#">Nhà trọ homestay</a></li>
+                    <li><a href="#">Phòng cao cấp</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div onclick="gioithieu()">GIỚI THIỆU</div>
+    <div onclick="hethongphong()">HỆ THỐNG PHÒNG</div>
+    <div>LIÊN HỆ</div>
+    <div>
+        <nav>
+                <div class="cha">☰
+                    <ul class="con" style="right: 100px;">
+                        <li><a href="#">Thiết lập trạng thái</a></li>
+                        <li><a href="#">Cài đặt</a></li>
+                        <li><a href="#">Báo cáo</a></li>
+                        <li><a href="#">Phản hồi</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</div>
+
+<div class="image">
+    <img id="img" src="anh1.jpg" onclick="changeImage()" alt="">
+</div>
+<div id="div3">
+    <table>
+        <tr>
+            <th colspan="10" style="font-size: 20px">Đặt Phòng</th>
+        </tr>
+        <tr>
+            <th colspan="10" style="font-size: 11px">Các trường được đánh dấu (<span style="color: red">*</span>) là bắt
+                buộc
+            </th>
+        </tr>
+        <br/>
+        <tr>
+            <td>Họ và tên <span style="color: red">*</span></td>
+            <td>Điện thoại <span style="color: red">*</span></td>
+            <td>Email <span style="color: red">*</span></td>
+        </tr>
+        <tr>
+            <td><input id="inputName" type="text"></td>
+            <td><input id="inputPhone" type="number"></td>
+            <td><input id="inputEmail" type="email"></td>
+        </tr>
+        <tr>
+            <td>Loại Phòng</td>
+            <td>Số người</td>
+            <td>Trẻ em</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="" id="inputRoom" style="width: 180px">
+                    <option value=""></option>
+                    <option value="Một giường đôi">Một giường đôi</option>
+                    <option value="Hai giường đôi">Hai giường đôi</option>
+                    <option value="Ba giường đôi">Ba giường đôi</option>
+                    <option value="Phòng VIP">Phòng VIP</option>
+                </select>
+            </td>
+            <td><input id="inputPerson" type="number"></td>
+            <td><input id="inputBaby" type="number"></td>
+        </tr>
+        <tr>
+            <td>Ngày đi</td>
+            <td>Ngày về</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input id="inputDayIn" type="date" style="width: 175px"></td>
+            <td><input id="inputDayOut" type="date" style="width: 175px"></td>
+            <td>
+                <button onclick="add()">Đặt Phòng
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="div4">
+    <table>
+        <tr>
+            <th colspan="10" style="font-size: 20px">Quản Lý Phòng</th>
+        </tr>
+        <br/>
+        <tr>
+            <th>Họ và tên</th>
+            <th>Điện thoại</th>
+            <th>Email</th>
+            <th>Loại phòng</th>
+            <th>Số người</th>
+            <th>Trẻ em</th>
+            <th>Ngày đi</th>
+            <th>Ngày về</th>
+            <th>Chỉnh sửa</th>
+        </tr>
+        <tbody id="show"></tbody>
+    </table>
+</div>
+
+</body>
+<script src="main.js"></script>
+<link rel="stylesheet" href="style.css">
+</html>
