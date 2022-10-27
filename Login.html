@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <style>
+        body {
+            background-image: url("Hinh-anh-nen-dep.png");
+        }
+
+        div {
+            width: 20%;
+            height: 250px;
+            background: whitesmoke;
+            border: 2px solid black;
+            margin: 70px 300px;
+
+        }
+
+        p {
+            font-weight: bold;
+            margin-left: 18px;
+        }
+
+        input {
+            border: 1px solid black;
+            margin-left: 15px;
+            width: 75%;
+        }
+
+        button {
+            font-weight: bold;
+            background: indianred;
+            color: white;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3>Vui lòng đăng nhập</h3>
+    <p>Tài khoản :</p>
+    <input id="useName" type="text" placeholder="Nhập username">
+    <p>Mật khẩu :</p>
+    <input id="passWord" type="password" placeholder="Nhập password"><br><br>
+    <button onclick="login()">Đăng Nhập</button>
+</div>
+</body>
+<script>
+    let account = JSON.parse(localStorage.getItem("account"));
+    if (account === null) {
+        account = [];
+    }
+
+    function login() {
+        let useName = document.getElementById("useName").value;
+        let passWord = document.getElementById("passWord").value;
+        for (let i = 0; i < account.length; i++) {
+            if (account[i].username === useName && account[i].password === passWord) {
+                alert("Xin chào " + useName);
+                location.href = "index.html";
+                return;
+            }
+        }
+        alert("Tài khoản hoặc mật khẩu không đúng. Xin vui lòng nhập lại.");
+    }
+
+
+</script>
+</html>

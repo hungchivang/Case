@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        body {
+            background-image: url("Hinh-anh-nen-dep.png");
+        }
+        div {
+            width: 20%;
+            height:350px;
+            background: whitesmoke;
+            border: 2px solid black;
+            margin: 70px 300px;
+
+        }
+        p {
+            font-weight: bold;
+            margin-left: 18px;
+        }
+        input {
+            border: 1px solid black;
+            margin-left: 15px;
+            width: 75%;
+        }
+        button {
+            font-weight: bold;
+            background: indianred;
+            color: white;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<script>
+    class Account {
+        username;
+        password
+        constructor(username, password) {
+            this.username = username;
+            this.password = password;
+        }
+    }
+
+</script>
+<body>
+<div>
+    <h3>Vui lòng đăng kí tại đây</h3>
+    <p>Tên tài khoản :</p>
+    <input id="useName" type="text" placeholder="Nhập username">
+    <p>Tên mật khẩu :</p>
+    <input id="passWord" type="password" placeholder="Nhập password">
+    <p>Nhập lại mật khẩu :</p>
+    <input id="passWord1" type="password" placeholder="Nhập lại password"><br><br>
+    <button onclick="register()">Đăng Kí</button>
+</div>
+</body>
+</html>

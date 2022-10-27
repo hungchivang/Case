@@ -31,14 +31,8 @@ class Customer {
     }
 }
 
-let person1 = new Customer("Âu Mạnh Tường", "0368568751", "Vantu@gmail.com", "Một giường đôi", 2, 0, "2022-10-20", "2022-10-30");
-let person2 = new Customer("Nguyễn Phi Hùng", "0366684662", "hungnguyen@gmail.com", "Hai giường đôi", 5, 2, "2022-11-14", "2022-11-18");
-let person3 = new Customer("Mai Minh Phương", "0974492555", "phuongcoi@gmail.com", "Ba giường đôi", 7, 0, "2022-12-05", "2022-12-30");
-let person4 = new Customer("Trần Văn Tú", "0398384812", "tu182@gmail.com", "Phòng VIP", 3, 1, "2022-07-15", "2022-10-14");
-let my_customer = [person1, person2, person3, person4];
-
-    let divShow = document.getElementById("show");
-
+let my_customer = JSON.parse(localStorage.getItem("person3"));
+let divShow = document.getElementById("show");
 
 function show() {
     let srt = "";
@@ -75,6 +69,7 @@ function add() {
     my_customer.push(newMy_customer);
     show();
     Clear();
+    localStorage.setItem("person3", JSON.stringify(my_customer));
 }
 
 function Clear() {
@@ -89,12 +84,17 @@ function Clear() {
 }
 
 function xoa(index) {
+    debugger
     my_customer.splice(index, 1);
-    show();
-    Clear();
+    if (confirm("Bạn có chắc chắn muốn xóa ? ") === true) {
+        show();
+        Clear();
+        localStorage.setItem("person3", JSON.stringify(my_customer));
+    }
 }
 
 function sua(index) {
+
     document.getElementById("inputName").value = my_customer[index].name;
     document.getElementById("inputPhone").value = my_customer[index].phone;
     document.getElementById("inputEmail").value = my_customer[index].email;
@@ -115,15 +115,29 @@ function luu(index) {
     let checkin = document.getElementById("inputDayIn").value;
     let checkout = document.getElementById("inputDayOut").value;
     let newMy_customer = new Customer(name, phone, email, roomStyle, person, baby, checkin, checkout)
-    my_customer.splice(index, 1,newMy_customer);
+    my_customer.splice(index, 1, newMy_customer);
     show();
     Clear();
+    localStorage.setItem("person3", JSON.stringify(my_customer));
 }
 
-function gioithieu() {
-    location.assign("gioi thieu.html");
+function register() {
+    let account = JSON.parse(localStorage.getItem("account"));
+    if (account === null) {
+        account = [];
+    }
+    let useName = document.getElementById("useName").value;
+    let passWord = document.getElementById("passWord").value;
+    let passWord1 = document.getElementById("passWord1").value;
+    let myAccount = new Account(useName, passWord);
+    if (passWord === passWord1) {
+        account.push(myAccount);
+        localStorage.setItem("account", JSON.stringify(account));
+        alert("Chào mừng bạn đến với SMART HOME");
+        location.href = "index.html";
+        document.getElementById("")
+        return;
+    }
+    alert("Mật khẩu không khớp");
 }
 
-function hethongphong() {
-    location.assign("hethongphong.html");
-}
