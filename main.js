@@ -135,7 +135,8 @@ function register() {
         localStorage.setItem("account", JSON.stringify(account));
         alert("Chào mừng bạn đến với SMART HOME");
         location.href = "index.html";
-        document.getElementById("")
+        document.getElementById("dangki").style.display = "none";
+        document.getElementById("dangnhap").innerHTML = useName;
         return;
     }
     alert("Mật khẩu không khớp");

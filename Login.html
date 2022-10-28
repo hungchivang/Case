@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <style>
         body {
-            background-image: url("Hinh-anh-nen-dep.png");
+            background-image: url("hinh_nen.jpg");
         }
 
         div {
@@ -61,6 +61,8 @@
             if (account[i].username === useName && account[i].password === passWord) {
                 alert("Xin chào " + useName);
                 location.href = "index.html";
+                document.getElementById("dangki").style.display = "none";
+                document.getElementById("dangnhap").innerHTML = useName;
                 return;
             }
         }

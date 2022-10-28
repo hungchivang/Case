@@ -25,7 +25,7 @@ th {
 }
 
 
-#div1  {
+#div1 {
     width: 200px;
     height: 100px;
     float: left;
@@ -37,38 +37,50 @@ th {
     float: left;
 
 }
+
 #div11 {
     background: lightskyblue;
     width: 70%;
     height: 100px;
     -webkit-animation: my 5000ms infinite;
 }
+
 @keyframes my {
-    0% { color: #F8CD0A; }
-    50% { color: #fff; }
-    100% { color: #F8CD0A; }
+    0% {
+        color: #F8CD0A;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #F8CD0A;
+    }
 }
+
 .header {
     display: flex;
     justify-content: space-around;
     height: 100px;
     width: 100%;
 }
+
 #div11 h2 {
     text-align: left;
     padding-left: 40px;
     padding-top: 3px;
 
 }
+
 #div11 h3 {
     text-align: left;
     padding-left: 40px;
 }
+
 #div12 {
     background: lightskyblue;
     width: 30%;
     height: 100px;
-    text-align:right;
+    text-align: right;
     padding-right: 10px;
 
 }
@@ -121,7 +133,6 @@ th {
 }
 
 
-
 #div5 img {
     width: 200px;
     height: 100px;
@@ -156,15 +167,19 @@ th {
 .noidung {
     width: 80%;
 }
+
 .benphai {
     width: 10%;
 }
+
 .bentrai {
     width: 10%;
 }
+
 .noidung img {
     max-width: 100%;
 }
+
 .menu {
     display: flex;
 }
@@ -304,28 +319,31 @@ hr {
     text-align: left;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
 
 }
-nav div ul li a:hover{
+
+nav div ul li a:hover {
     background-color: goldenrod;
-color: blue;
-}
-.cha{
-    position:absolute;
-    text-align: left;
-}
-.con{
-    position:relative;
-    width:160px;
-    background-color: lightseagreen;
-    list-style: none;
-    display:none;
-    line-height:30px;
+    color: blue;
 }
 
-.cha:hover .con{
-    display:block;
+.cha {
+    position: absolute;
+    text-align: left;
+}
+
+.con {
+    position: relative;
+    width: 160px;
+    background-color: lightseagreen;
+    list-style: none;
+    display: none;
+    line-height: 30px;
+}
+
+.cha:hover .con {
+    display: block;
 }
